@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "Python Read Files API"
+description = "Api for read files"
+version = "0.0.0"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+sqlalchemy = "^2.0.36"
+pydantic = {extras = ["email"], version = "^2.10.4"}
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.10"
+uvicorn = "^0.34.0"
+pyjwt = "^2.10.1"
+bcrypt = "^4.2.1"
+alembic = "^1.14.0"
+numpy = "^2.0.0"
+pandas = "^2.2.2"
+python-multipart = "^0.0.20"
+pypdf2 = "^3.0.1"
+xlrd = "^2.0.1"
+jpype1 = "^1.5.1"
+tabula-py = "^2.10.0"
+openpyxl = "^3.1.5"
+lxml = "^5.3.0"
+html5lib = "^1.1"
+
+[tool.poetry.group.dev.dependencies]
+psycopg2-binary = "^2.9.10"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.autopep8]
+max_line_length = 100
+in-place = true
+recursive = true
+exclude="main.py"
+ignore = ["E712", "W504", "E704", "E722"]
